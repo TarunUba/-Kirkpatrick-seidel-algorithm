@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142877379-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-142877379-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Kirkpatrick and Seidel algorithm</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon2.png" />
+
+    <!-- importing jQuery, d3 v4, MathJax -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/d3.v4.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: {
+            scale: 100
+        },
+        "HTML-CSS": {
+            scale: 100
+        },
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']]
+        }
+    });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+
+    <!-- styling -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Overpass:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-image: url('img/images.jfif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Visualizing the Kirkpatrick
+            and Seidel Algorithm</h1>
+        <h3><a style="color: inherit; font-family:cursive;" href="https://github.com/TarunUba">Tarun Uba</a><br> <a
+                style="color: inherit; font-family:monospace; font-size:x-large ;">CS502: Computational Geometry</a>
+        </h3>
+    </div>
+    <hr style=" background: linear-gradient(to right, blue, pink);
+        height: 2px;width: 50%; margin: auto;">
+    <br>
+    <div class="about v1">
+        <div class="sub_about">
+            <img class="hide info-btn" src="img/hide.png" />
+            <h3>About the Algorithm</h3>
+            <p class="sub_info hidden">
+                The <a href="https://en.wikipedia.org/wiki/Kirkpatrick%E2%80%93Seidel_algorithm" target="_blank"
+                    style="color:blueviolet;">Kirkpatrick–Seidel algorithm</a> is an algorithm for computing the <a
+                    href="http://mathworld.wolfram.com/ConvexHull.html " style="color:blueviolet;"
+                    target="_blank">convex
+                    hull</a> for a given set
+                of points in the plane. It is a particularly notable
+                because it can compute the convex hull of $n$ points in $O(n \log h)$ time, where $h$ is the number of
+                points in the hull.<br>
+                Unlike other comparable $O(n \log h)$ algorithms that combine and tweak other
+                convex hull algorithms, the Ultimate Convex Hull Algorithm is a divide-and-conquer algorithm that then
+                uses <i>bridges</i> to merge our problem.
+                <br>
+                If you're interested in exploring the algorithm, add some points to the canvas
+                below and see how it works!
+            </p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="svg-container">
+        </div>
+
+        <div class="guide-container">
+            <div class="prev-button disabled">
+                <p>Previous Step</p>
+            </div>
+
+            <div class="text-container">
+                <p id='instruction'></p>
+            </div>
+
+            <div class="next-button disabled">
+                <p>Next<br />Step</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about v2">
+        <div class="sub_about">
+            <h3 class="sub_info">Special thanks to:-</h3>
+            <p class="sub_info">Sir Seela Veerabhadreswara Rao for a wonderful course</p>
+            <p class="sub_info">Ben Tanen who's work helped me in doing this project </p>
+
+        </div>
+
+
+        <!--
+        <div class="sub_about">
+            <img class="hide info-btn" src="img/hide.png" /><h3>Understanding the Complexity of $O(n \log h)$</h3>
+            <p class="sub_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quas corporis quidem delectus magni eos culpa exercitationem distinctio id possimus odio excepturi obcaecati corrupti voluptatibus, necessitatibus eaque, aut tempore. Voluptatem.</p>
+        </div>
+        -->
+    </div>
+
+    <!-- custom js files -->
+    <script src="js/polygon.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
